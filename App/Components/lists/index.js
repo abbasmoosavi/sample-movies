@@ -1,5 +1,5 @@
-import DetailsList from './DetailsList';
+import VerticalSearchList from './VerticalSearchList';
 
 export default {
-  DetailsList,
+  VerticalSearchList,
 };

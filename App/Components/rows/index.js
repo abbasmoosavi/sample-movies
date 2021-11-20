@@ -1,5 +1,5 @@
-import DetailsRow from './DetailsRow';
+import RowSearchList from './RowSearchList';
 
 export default {
-  DetailsRow,
+  RowSearchList,
 };

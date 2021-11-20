@@ -2,7 +2,7 @@ import { createReducer } from 'reduxsauce';
 import { INITIAL_STATE } from './InitialState';
 import { MoviesTypes } from './Actions';
 
-export const getMoviesLoading = state => ({
+export const getMoviesLoading = (state) => ({
   ...state,
   loadingGetMovies: true,
   failurMessageGetMovies: null,

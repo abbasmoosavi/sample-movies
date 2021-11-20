@@ -6,7 +6,7 @@ const AppConfig = {
   TIMEOUT: 20000,
   UPLOAD_TIMEOUT: 60000,
   PING_SERVER: 'https://google.com/',
-  GOOGLE_API_KEY: 'AIzaSyDnqjtKrimqv3SK3HBWmO-5N6muf6ROvIg'
+  OMDB_API_KEY: 'c98257f9',
 };
 
 export default AppConfig;

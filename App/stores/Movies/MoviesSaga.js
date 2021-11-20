@@ -5,8 +5,9 @@ import MoviesActions, { MoviesTypes } from './Actions';
 function* getMovies(action) {
   yield put(MoviesActions.getMoviesLoading());
   const result = yield call(OmdbService.getAllMovies, action.params);
-  if (result.status === 'OK') {
-    yield put(MoviesActions.getMoviesSuccess(result?.results));
+  console.log(`result`, result);
+  if (result.Response) {
+    yield put(MoviesActions.getMoviesSuccess(result?.Search));
   } else {
     yield put(MoviesActions.getMoviesFailure(result?.message));
   }

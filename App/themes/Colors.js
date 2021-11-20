@@ -20,6 +20,6 @@ export default {
   error: '#dc3545',
   icon: '#23B3BE',
   shadowText: '#a1a1a1',
-  iconColor: '#c0c0c0',
+  iconColor: '#636363',
   searchBack: '#e0e0e0',
 };

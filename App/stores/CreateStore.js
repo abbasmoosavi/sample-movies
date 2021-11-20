@@ -9,9 +9,7 @@ import Rehydration from './Rehydration';
 const persistConfig = {
   key: 'root',
   storage,
-  blacklist: [
-    'movies',
-  ],
+  blacklist: ['movies'],
   whitelist: null,
   timeout: null,
 };
