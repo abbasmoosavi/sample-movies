@@ -5,6 +5,11 @@ const { Types, Creators } = createActions({
   getMoviesLoading: null,
   getMoviesSuccess: ['resultGetMovies'],
   getMoviesFailure: ['errorMessage'],
+
+  getDetail: ['params', 'meta'],
+  getDetailLoading: null,
+  getDetailSuccess: ['resultGetDetail'],
+  getDetailFailure: ['errorMessage'],
 });
 
 export const MoviesTypes = Types;

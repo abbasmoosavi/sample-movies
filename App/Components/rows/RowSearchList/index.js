@@ -4,14 +4,15 @@ import { View, Text, TouchableOpacity } from 'react-native';
 import { Row } from 'react-native-easy-grid';
 import FastImage from 'react-native-fast-image';
 import OcticonsIcon from 'react-native-vector-icons/Octicons';
-import { NStrings } from '../../../navigator';
-import { navigate } from '../../../navigator/NavigationService';
+import { useDispatch } from 'react-redux';
+import MoviesActions from '../../../stores/Movies/Actions';
 import { ApplicationStyles, Colors } from '../../../themes';
 import Style from './style';
 
 const RowSearchList = ({ item }) => {
+  const dispatch = useDispatch();
   const onSelectMovies = () => {
-    navigate(NStrings.Routes.DETAIL_SCREEN, item);
+    dispatch(MoviesActions.getDetail({ i: item?.imdbID }));
   };
 
   return (

@@ -10,7 +10,14 @@ import { reducer as MoviesReducer } from './Movies/Reducers';
 const moviesPersistConfig = {
   key: 'movies',
   storage,
-  blacklist: ['loadingGetMovies', 'resultGetMovies'],
+  blacklist: [
+    'loadingGetMovies',
+    'resultGetMovies',
+    'failurMessageGetMovies',
+    'loadingGetDetail',
+    'resultGetDetail',
+    'failurMessageGetDetail',
+  ],
 };
 
 // Add a nested state of reducer for rehydrated

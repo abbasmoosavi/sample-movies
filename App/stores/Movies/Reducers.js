@@ -22,8 +22,32 @@ export const getMoviesFailure = (state, { errorMessage }) => ({
   failurMessageGetMovies: errorMessage,
 });
 
+export const getDetailLoading = (state) => ({
+  ...state,
+  loadingGetDetail: true,
+  failurMessageGetDetail: null,
+});
+
+export const getDetailSuccess = (state, { resultGetDetail }) => ({
+  ...state,
+  loadingGetDetail: false,
+  resultGetDetail,
+  failurMessageGetDetail: null,
+});
+
+export const getDetailFailure = (state, { errorMessage }) => ({
+  ...state,
+  loadingGetDetail: false,
+  resultGetDetail: [],
+  failurMessageGetDetail: errorMessage,
+});
+
 export const reducer = createReducer(INITIAL_STATE, {
   [MoviesTypes.GET_MOVIES_LOADING]: getMoviesLoading,
   [MoviesTypes.GET_MOVIES_SUCCESS]: getMoviesSuccess,
   [MoviesTypes.GET_MOVIES_FAILURE]: getMoviesFailure,
+
+  [MoviesTypes.GET_DETAIL_LOADING]: getDetailLoading,
+  [MoviesTypes.GET_DETAIL_SUCCESS]: getDetailSuccess,
+  [MoviesTypes.GET_DETAIL_FAILURE]: getDetailFailure,
 });
